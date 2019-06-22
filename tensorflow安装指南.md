@@ -88,3 +88,24 @@ ImportError: DLL load failed: 找不到指定的模块。
 然后安装：
 <br>`pip install tensorflow-1.6.0-cp36-cp36m-win_amd64.whl`
 <br>此方法并没有尝试。
+
+<br>安装gpu版本
+·pip install tensorflow-gpu·  #默认稳定版
+
+<br>确认安装了NVIDIA 的CUDA
+
+<br>确定是否启用gpu版本：
+```
+import tensorflow as tf
+import numpy as np
+a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
+b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[3, 2], name='b')
+c = tf.matmul(a, b)
+sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+print(sess.run(c))
+```
+<br>显示结果为：
+```
+a: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+b: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+```
