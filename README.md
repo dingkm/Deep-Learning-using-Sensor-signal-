@@ -1,4 +1,4 @@
-##Background
+## Background
 
 Research content when I was in internship in TOSHIBA R&D Center.
 
@@ -21,14 +21,14 @@ This time, the dataset I used is **Heterogeneity Activity Recognition Data Set**
 - Time series data in deep neural network with/without temporal layers(LSTM).
 - Which is better input data, raw data or frequency domain data? 
 
-##Reimplement two models 
+## Reinplement two models 
 Two published models, one is called [DeepConvLSTM](https://www.mdpi.com/1424-8220/16/1/115/htm)
  and the other is called [DeepSense](https://arxiv.org/abs/1611.01942). You can check the paper.
 Model architecture is as followed.
 ![DeepConvLSTM](https://upload-images.jianshu.io/upload_images/21422961-ae1607efe20b47be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![DeepSense](https://upload-images.jianshu.io/upload_images/21422961-a397f6691cc810c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 To make baseline comparison, I used two layers of LSTM and also BiLSTM(biodirection LSTM layers).
-##Results 
+## Results 
 ![Comparsion in two datasets](https://upload-images.jianshu.io/upload_images/21422961-3c0f1a4ee24520e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![CM in two datasets](https://upload-images.jianshu.io/upload_images/21422961-05d0c3b26cfd07fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
